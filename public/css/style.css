@@ -1,0 +1,103 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    
+    margin-top: 20px;
+}
+.custom-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+h1{
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(242, 230, 230);
+    margin: 30px;
+    margin-left: 592px;
+    margin-right: 636px;
+    padding-bottom: 5px;
+
+}
+
+.form-container{
+    margin-left: 480px;
+    margin-right: 480px;
+    margin-top: 20px;
+    border: 1px solid rgb(236, 229, 229);
+    border-radius: 20px;
+    padding: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.product {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.product h3 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.product p {
+    color: #666;
+    font-size: 14px;
+}
+
+.product a, .product button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.product a {
+    background: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.product button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #c82333;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
