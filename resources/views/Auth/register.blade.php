@@ -12,7 +12,8 @@
 <body>
     <h1>Register Page</h1>
     <div class="container mt-4">
-        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+        <!-- <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data"> -->
+        <form id="my-form">
             @csrf
 
             <div class="mb-3">
@@ -119,9 +120,37 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary" id="btnSubmit">Register</button>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#my-form').on('submit', function(e) {
+            e.preventDefault(); 
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '{{ route('/register') }}', 
+                type: 'POST',
+                data: formData,
+                processData: false, 
+                contentType: false,
+                success: function(response) {
+                    console.log(response);
+                    alert('Form submitted successfully!');
+                    window.location.href = "{{ route('/index') }}"; 
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                    alert('An error occurred while submitting the form.');
+                }
+            });
+        });
+    });
+</script>
+   
 </body>
 
 </html>

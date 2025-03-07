@@ -64,6 +64,12 @@
                 <a href="{{ route('/index') }}" class="btn btn-secondary">Cancel</a>
             </div>
         </form>
+
+        <!-- Update form -->
+       
+
+
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -82,6 +88,7 @@
                     },
                     success: function(response) {
                         alert('Profile updated successfully!');
+                        window.location.href = "{{ route('/index') }}";
                     },
                     error: function(xhr) {
                         if (xhr.status === 422) {
