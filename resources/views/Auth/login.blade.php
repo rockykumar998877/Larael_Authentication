@@ -22,6 +22,7 @@
             </div>
             <button type="button" class="btn btn-primary" id="login">Login</button>
         </form>
+        <a href="{{ route('/register') }}">create new account</a>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -12,6 +12,10 @@
     <div class="container mt-4">
         <h1 class="text-center">User Profile</h1>
         <a href="{{ route('/register') }}" class="btn btn-success mb-3">Add New User</a>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
                 <tr>
